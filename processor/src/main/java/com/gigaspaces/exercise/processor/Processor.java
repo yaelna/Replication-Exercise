@@ -27,8 +27,9 @@ public class Processor {
     @SpaceDataEvent
     public Message processMessage(Message msg) {
         logger.info("Processor PROCESSING: " + msg);
-        if(msg.getCity() == City.NEW_YORK){
-            msg.setProcessed(true);
+        msg.setProcessed(true);
+        if(msg.getCity() == City.NEW_YORK) {
+            msg.setEligible(true);
         }
         return msg;
     }

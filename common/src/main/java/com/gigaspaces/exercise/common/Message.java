@@ -26,6 +26,7 @@ public class Message {
     private Long id;
     private City city;
     private Boolean processed = false;
+    private Boolean eligible = false;
 
     /**
      * Necessary Default constructor
@@ -74,12 +75,11 @@ public class Message {
         this.processed = processed;
     }
 
-    @Override
-    public String toString() {
-        return "Message{" +
-                "id=" + id +
-                ", city=" + city +
-                ", processed=" + processed +
-                '}';
+    public Boolean getEligible() {
+        return eligible;
+    }
+
+    public void setEligible(Boolean eligible) {
+        this.eligible = eligible;
     }
 }

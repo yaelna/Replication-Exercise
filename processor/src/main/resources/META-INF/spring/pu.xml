@@ -11,10 +11,16 @@
 
     <!-- ========================================================================================================== -->
 
+    <bean id="simpleFilter" class="com.gigaspaces.exercise.common.Filter"/>
+
     <!--
         A bean representing a space (an IJSpace implementation).
     -->
-    <os-core:space id="space" url="/./processorSpace"/>
+    <os-core:space id="space" url="/./processorSpace">
+        <os-core:space-replication-filter>
+            <os-core:input-filter ref="simpleFilter"/>
+        </os-core:space-replication-filter>
+    </os-core:space>
 
     <!--
         Defines a distributed transaction manager (will be used for transactional operations with the space).
