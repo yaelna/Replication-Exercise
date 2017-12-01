@@ -11,6 +11,9 @@
 
     <!-- ========================================================================================================== -->
 
+    <!--
+      Replication Filter Bean.
+    -->
     <bean id="simpleFilter" class="com.gigaspaces.exercise.common.Filter"/>
 
     <!--
